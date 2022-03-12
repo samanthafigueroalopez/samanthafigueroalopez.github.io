@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login form Transcript</title>
+<script>
+    function myFunction()
+    {
+        var un=document.forms["myForm"] ["Uname"].value;
+        var pw=document.forms["myForm"] ["Pass"].value;
+        if(un=="SJSU" && pw=="CMPE131")
+        {
+            window.location.href="table.html";
+          }
+          else{
+              alert("Invalid username and password");
+          }
+        }
+</script>
+<link  rel="stylesheet" href="login-page.css"/>
+</head>
+<body>
+    <h4>Transcript Login Form</h4>
+    <div class="div1">
+        
+        <form name="myForm" method="post">
+        <label> Username</label>
+        <input type="text" name="Uname" class="inputText" placeholder="User Name">
+        <br><br>
+        <label>Password</label>
+        <input type="password" name="Pass" class="inputText" placeholder="Password">
+        <input type="button" name="log" id="logButton" value="Login" onclick="myFunction()">
+    <br><br>
+    </form>
+    </div>
+</body>
